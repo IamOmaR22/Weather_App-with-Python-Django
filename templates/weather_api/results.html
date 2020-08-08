@@ -1,0 +1,105 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{city_name}} {% endblock title %}
+{% block content %}
+
+<div class="forecast-table">
+                <div class="container">
+                    <div class="forecast-container">
+                        <div class="today forecast">
+                            <div class="forecast-header">
+                                <div class="day">{{date}}</div>
+                                <div class="date">{% now "l" %}</div>
+                            </div> <!-- .forecast-header -->
+                            <div class="forecast-content">
+                                <div class="location">{{city_name}},{{city_country}}</div>
+                                <div class="degree">
+                                    <div class="num">{{temp}}<sup>o</sup>C</div>
+                                    <div class="forecast-icon">
+                                        <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="" width=90>
+                                    </div>  
+                                </div>
+                                <span><img style="height: 25px; width: 25px" src="{%static 'images/cloud.png' %}" alt="">{{cloud}}%</span>
+                                <span><img src="{%static 'images/icon-wind.png' %}" alt="">{{wind}}km/h</span>
+                                <span><img src="{%static 'images/icon-compass.png' %}" alt="degree">{{degree}}<sup> o</sup></span>
+                                <span><img style="height: 25px; width: 25px;" src="{%static 'images/hot.png' %}" alt="status">{{status|capfirst }}</span>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="forecast-header">
+                                <div class="day">{{date1}}</div>
+                            </div> <!-- .forecast-header -->
+                            <div class="forecast-content">
+                                <div class="forecast-icon">
+                                    <img src="http://openweathermap.org/img/wn/{{icon1}}@2x.png" alt="" width=48>
+                                </div>
+                                <div class="degree">{{temp_max1}}<sup>o</sup>C</div>
+                                <small>{{temp_min1}}<sup>o</sup></small>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="forecast-header">
+                                <div class="day">{{date2}}</div>
+                            </div> <!-- .forecast-header -->
+                            <div class="forecast-content">
+                                <div class="forecast-icon">
+                                    <img src="http://openweathermap.org/img/wn/{{icon2}}@2x.png" alt="" width=48>
+                                </div>
+                                <div class="degree">{{temp_max2}}<sup>o</sup>C</div>
+                                <small>{{temp_min2}}<sup>o</sup></small>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="forecast-header">
+                                <div class="day">{{date3}}</div>
+                            </div> <!-- .forecast-header -->
+                            <div class="forecast-content">
+                                <div class="forecast-icon">
+                                    <img src="http://openweathermap.org/img/wn/{{icon3}}@2x.png" alt="" width=48>
+                                </div>
+                                <div class="degree">{{temp_max3}}<sup>o</sup>C</div>
+                                <small>{{temp_min3}}<sup>o</sup></small>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="forecast-header">
+                                <div class="day">{{date4}}</div>
+                            </div> <!-- .forecast-header -->
+                            <div class="forecast-content">
+                                <div class="forecast-icon">
+                                    <img src="http://openweathermap.org/img/wn/{{icon4}}@2x.png" alt="" width=48>
+                                </div>
+                                <div class="degree">{{temp_max4}}<sup>o</sup>C</div>
+                                <small>{{temp_min4}}<sup>o</sup></small>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="forecast-header">
+                                <div class="day">{{date5}}</div>
+                            </div> <!-- .forecast-header -->
+                            <div class="forecast-content">
+                                <div class="forecast-icon">
+                                    <img src="http://openweathermap.org/img/wn/{{icon5}}@2x.png" alt="" width=48>
+                                </div>
+                                <div class="degree">{{temp_max5}}<sup>o</sup>C</div>
+                                <small>{{temp_min5}}<sup>o</sup></small>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="forecast-header">
+                                <div class="day">{{date6}}</div>
+                            </div> <!-- .forecast-header -->
+                            <div class="forecast-content">
+                                <div class="forecast-icon">
+                                    <img src="http://openweathermap.org/img/wn/{{icon6}}@2x.png" alt="" width=48>
+                                </div>
+                                <div class="degree">{{temp_max6}}<sup>o</sup>C</div>
+                                <small>{{temp_min6}}<sup>o</sup></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{% endblock content %}
