@@ -21,7 +21,7 @@
     <div class="site-content">
       <div class="site-header">
         <div class="container">
-          <a href="#" class="branding">
+          <a href="{% url 'home' %}" class="branding">
             <img src="{%static 'images/logo.png' %}" alt="" class="logo">
             <div class="logo-type">
               <h1 class="site-title">WeatherBug</h1>
@@ -33,7 +33,7 @@
           <div class="main-navigation">
             <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
             <ul class="menu">
-              <li class="menu-item current-menu-item"><a href="{%url 'home'%}">Home</a></li>
+              <li class="menu-item current-menu-item"><a href="{% url 'home' %}">Home</a></li>
 
             </ul> <!-- .menu -->
           </div> <!-- .main-navigation -->
@@ -43,7 +43,7 @@
         </div>
       </div> <!-- .site-header -->
 
-      <div class="hero" data-bg-image="{%static 'images/banner.png' %}">
+      <div class="hero" data-bg-image="{% static 'images/banner.png' %}">
         <div class="container">
           <form action="{%url 'result'%}" class="find-location" method="post">
             {% csrf_token%}
@@ -70,8 +70,9 @@
               <div class="social-links">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
           </div>
