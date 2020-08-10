@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from weather_api.key import api_key
 import requests
 import math
+from .models import Social
 
 # Create your views here.
 
@@ -74,3 +75,11 @@ def result(request):
         return render(request, "weather_api/results.html", context)
     else:
     	return redirect('home')
+
+
+def social_links(request):
+    sl = Social.objects.all()
+    context = {
+        'sl': sl
+    }
+    return render(request, 'weather_api/base.html', context)
